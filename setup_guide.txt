@@ -1,0 +1,124 @@
+1. Install CUDA using the .deb in Downloads and the procedure in
+https://developer.nvidia.com/cuda-10.1-download-archive-base?target_os=Linux&target_arch=x86_64&target_distro=Ubuntu&target_version=1604&target_type=deblocal
+Or
+using the sh file
+
+
+(Remember to add PATH to the ~/.bashrc file in order to invoke command nvcc -V using the link below)
+https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#post-installation-actions 
+
+1.1 Install two CUDA on one system
+https://www.pugetsystems.com/labs/hpc/How-To-Install-CUDA-10-together-with-9-2-on-Ubuntu-18-04-with-support-for-NVIDIA-20XX-Turing-GPUs-1236/
+
+2. Install cuDNN run file and dev file by clicking on the .deb files in Downloads (tensorflow2.2 is compatible with cuDNN7, not cuDNN8)
+
+2. Install CMake using
+https://cmake.org/install/
+
+3. Create a python3.7 virtualenv using this guide
+https://stackoverflow.com/a/53071893
+sudo apt install python3.7 python3-venv python3.7-venv
+python3.7 -m venv venv_ubuntu_py37
+
+
+3.1 Create virtualenv python3.6
+sudo apt-get install python-virtualenv
+virtualenv venv_py36_ubuntu --python=python3.6
+
+4. Install system wide and python opencv using this guide
+https://www.learnopencv.com/install-opencv-4-on-ubuntu-18-04/
+
+(If failed to install opencv to python use the command below)
+pip install opencv-python
+(Verify opencv python installation with the command)
+python -c "import cv2"
+
+5.0 Install tensorflow==2.2 by the command
+pip install tensorflow==2.2
+https://www.tensorflow.org/install/source#gpu
+
+5.1 Verify if tensorflow is using GPU by the command Tensorflow 2
+python -c "from tensorflow.python.client import device_lib;print(device_lib.list_local_devices())"
+Or
+python -c "import tensorflow as tf; print("Num GPUs Available: ", len(tf.config.list_physical_devices('GPU')))"
+
+Tensorflow 1
+python -c "import tensorflow as tf; sess = tf.Session(config=tf.ConfigProto(log_device_placement=True))"
+
+
+(if encounter libcusolver not found, try)
+cd $LD_LIBRARY_PATH
+sudo ln libcusolver.so.11 libcusolver.so.10  # hard link
+(https://github.com/tensorflow/tensorflow/issues/44777#issuecomment-771285431)
+
+5.3 Pytorch
+pip install torch tqdm pandas numpy seaborn matplotlib opencv-python jupyter scikit-learn jupyter_contrib_nbextensions
+
+python -c "import torch; print(torch.cuda.is_available()); print(torch.cuda.get_device_name(0));"
+
+5.2 Install python packages (by creating the requirements.txt file)
+pandas (using command pip install -r requirements.txt)
+matplotlib
+scikit-learn
+jupyter
+
+
+6.1 Or install some essential Python libaries
+pip install --upgrade pip
+pip install tensorflow==2.2 keras pandas numpy seaborn matplotlib opencv-python jupyter scikit-learn jupyter_contrib_nbextensions PyQt5 pyqtgraph imageio
+
+
+
+7. (Optional) Install pytorch
+pip install torch torchvision
+python -c "import torch; print(torch.cuda.is_available()); print(torch.cuda.get_device_name(0));"
+
+8. (Optional) Some useful apps
+- teamviewer (.deb)
+- zoom (.deb)
+- matlab (in fundrive)
+- windscribe
+- blueman ( sudo apt-get install blueman )
+- foxitreader (https://www.linuxbabe.com/desktop-linux/install-foxit-pdf-reader-ubuntu)
+- OBS (chrome may not be captured, in chrome://settings/appearance set Use system title bar and borders to yes)
+
+- window foxitreader (use wine 6 and the foxitreader installer (exe file) in Downloads)
+- tweak tools ( sudo apt install gnome-tweak-tool )
+- vscode
+- pbcopy
+
+sudo apt-get install xclip -y
+sudo apt install gnome-tweak-tool
+sudo snap install --classic code
+sudo apt-get install -y gedit-plugin-text-size
+sudo apt install earlyoom
+touch ~/Templates/"Untitled Document"
+sudo apt install gcc gcc-8 g++-8
+sudo apt install build-essential
+sudo bash vscode_installer.sh
+
+8. add shorthand for IP addresses
+sudo nano ~/.ssh/config
+Host workstation-a
+    HostName 192.168.x.x
+    User adam
+    Port 22
+
+9. some ~/.bashrc commands
+source /media/sieumap43/workdrive/practice_code/env_ubuntu_tensorflow/bin/activate
+# export PATH=/usr/local/cuda-11.3/bin${PATH:+:${PATH}}
+# export LD_LIBRARY_PATH=/usr/local/cuda-11.3/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+
+# for python 2.2, CUDA 10.1
+export PATH="/usr/local/cuda-10.1/bin:$PATH"
+export LD_LIBRARY_PATH=/usr/local/cuda-10.2/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+
+# for python 1.3 - 1.5, CUDA 10.0
+export PATH=/usr/local/cuda-10.0/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-10.0/lib64\
+ ${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+
+
+10 Fixing terminal font
+Open your terminal Go to Edit-->Profile Preferences and in general tab check "Use System fixed width font"
+https://askubuntu.com/a/8825

@@ -1,0 +1,4 @@
+Ctrl + B + (Shift + ")      Split horizontally
+Ctrl + B + %                Split vertically
+
+Ctrl + B + O                Switch panes

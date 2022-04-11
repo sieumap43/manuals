@@ -1,0 +1,47 @@
+Ctrl + Shift + E	Show folder explorer
+Ctrl + B			Toggle folder explorer
+Ctrl + K + Z		Zen mode
+Ctrl + K + Enter	Keep tab open
+Ctrl + K + O		Open tab in a new window
+Ctrl + `			Terminal
+Ctrl + Shift + P	Search for settings
+
+Ctrl + Shift + K    Delete one line
+Ctrl + D            Also delete one line
+Ctrl + [            Indent a line
+Ctrl + ]            Unindent a line
+Shift + K           Cut one line
+Shift + Delete      Also cut one line
+
+
+
+Alt + $number		Open tab $number
+Ctrl + Tab          Go to previous tab(s) in history
+Ctrl + Alt + -      Go to previous position
+
+Ctrl + Alt + N      Run code in terminal (need Code Runner Extension)
+
+F11                 Full screen
+F12                 Go to definition
+
+Windows + K         Switch terminal (forward) # need to modify the JSON file
+Windows + J         Switch terminal (backward) # need to modify the JSON file
+
+keybindings.json
+// Place your key bindings in this file to override the defaults
+[
+    { "key": "cmd+k", "command": "workbench.action.terminal.focusNext" },
+    { "key": "cmd+j", "command": "workbench.action.terminal.focusPrevious" }
+]
+
+
+
+Linux shortcut
+Windows + H         Minimize windows 
+Windows + L         Lock screen
+
+
+Google Chrome
+Ctrl + Shift + B    Hide/Unhide Bookmark Bar
+Ctrl + H            Show browsing history
+Ctrl + J            Show download history
