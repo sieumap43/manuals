@@ -1,0 +1,3 @@
+scp -r user@remoteip:/directory .
+
+rsync -avP -e ssh user@remoteIP:/directory .
