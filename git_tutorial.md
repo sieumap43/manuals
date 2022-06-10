@@ -49,7 +49,8 @@ git merge some-branch # merge some-branch to the current branch
 git branch # list branches\
 git branch -d some-branch # delete some-branch\
 git checkout some-branch # switch to some-branch
-git checkout -b some-branch # create on some-branch
+git checkout -b some-branch # create some-branch
+git branch -m <old> <new> # rename branch
 
 # Commit
 git add . # save all changes\
