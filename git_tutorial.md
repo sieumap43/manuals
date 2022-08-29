@@ -60,6 +60,11 @@ git merge other-branch # merge some other-branch to the current branch\
 git push -u origin main # push to remote repository\
 git pull
 
+# Merge with another branch
+git merge other-branch # merge some other-branch to the current branch
+git reset HEAD^
+git difftool
+
 # Remove an already-committed file
 git rm --cached FILENAME
 
