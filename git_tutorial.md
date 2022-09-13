@@ -26,7 +26,7 @@ git clone "ssh directory"
 git cofig [--global] user.name "johndoe"
 git config [--global] user.email "johndoe@gmail.com"
 
-# 
+#
 echo "# research-project-presentation" >> README.md
 git init
 git add README.md

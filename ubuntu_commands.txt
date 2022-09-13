@@ -1,0 +1,3 @@
+# delete process with name pattern
+# https://stackoverflow.com/a/8987063
+pkill -f my_pattern
