@@ -26,6 +26,15 @@ git clone "ssh directory"
 git cofig [--global] user.name "johndoe"
 git config [--global] user.email "johndoe@gmail.com"
 
+# 
+echo "# research-project-presentation" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/sieumap43/research-project-presentation.git
+git push -u origin main
+
 # Create a local repository
 # Connect a local directory to a remote repository
 git init
@@ -89,6 +98,12 @@ git remote set-url origin [updated link url https://........git] # when the remo
 # Dealing with submodules
 rm -r submodule/.git
 git rm --cached submodule
+
+# Move uncommitted changes between machines
+# https://stackoverflow.com/a/15438863
+git diff --cached --binary > mypatch.patch # on source machine
+git apply mypatch.patch # on destination machine
+
 
 VSCode
 Ctrl + Shift + T to open Git terminal (windows)

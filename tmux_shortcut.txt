@@ -2,3 +2,6 @@ Ctrl + B + (Shift + ")      Split horizontally
 Ctrl + B + %                Split vertically
 
 Ctrl + B + O                Switch panes
+
+Ctrl + B + D		    Detach
+tmux a -t0		    Attach session 0

@@ -1,3 +1,11 @@
 scp -r user@remoteip:/directory .
 
 rsync -avP -e ssh user@remoteIP:/directory .
+
+
+
+# Local notify
+# https://askubuntu.com/a/656608
+
+# Remote notify
+# https://unix.stackexchange.com/a/111107
