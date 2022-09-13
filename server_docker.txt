@@ -7,10 +7,10 @@ ssh -R 127.0.0.1:3121:127.0.0.1:3128 dgx-docker
 Forward 3128 into 3121 into docker
 
 Change environment in docker like:
-export HTTPS_PROXY=http://127.0.0.1:3121
-export HTTP_PROXY=http://127.0.0.1:3121
-export http_proxy=http://127.0.0.1:3121
-export https_proxy=http://127.0.0.1:3121
+export HTTPS_PROXY=http://127.0.0.1:3215
+export HTTP_PROXY=http://127.0.0.1:3215
+export http_proxy=http://127.0.0.1:3215
+export https_proxy=http://127.0.0.1:3215
 
 Test with
 wget www.google.de

@@ -58,7 +58,8 @@ git merge some-branch # merge some-branch to the current branch
 git branch # list branches\
 git branch -d some-branch # delete some-branch\
 git checkout some-branch # switch to some-branch
-git checkout -b some-branch # create on some-branch
+git checkout -b some-branch # create some-branch
+git branch -m <old> <new> # rename branch
 
 # Commit
 git add . # save all changes\
@@ -67,6 +68,11 @@ git commit -am "some commit description" # short hand add and commit
 git merge other-branch # merge some other-branch to the current branch\
 git push -u origin main # push to remote repository\
 git pull
+
+# Merge with another branch
+git merge other-branch # merge some other-branch to the current branch
+git reset HEAD^
+git difftool
 
 # Remove an already-committed file
 git rm --cached FILENAME
