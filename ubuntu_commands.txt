@@ -1,3 +1,7 @@
 # delete process with name pattern
 # https://stackoverflow.com/a/8987063
 pkill -f my_pattern
+
+# set write permission to user
+# https://askubuntu.com/a/809562
+setfacl -R -m u:username:rwx myfolder
