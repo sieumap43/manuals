@@ -110,6 +110,13 @@ git rm --cached submodule
 git diff --cached --binary > mypatch.patch # on source machine
 git apply mypatch.patch # on destination machine
 
+# git quick function
+# https://stackoverflow.com/a/60266103/7978394
+function lazygit() {
+    git add .
+    git commit -a -m "$1"
+    git push
+}
 
 VSCode
 Ctrl + Shift + T to open Git terminal (windows)
