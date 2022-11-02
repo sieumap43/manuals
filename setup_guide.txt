@@ -10,6 +10,12 @@ https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#post-insta
 1.1 Install two CUDA on one system
 https://www.pugetsystems.com/labs/hpc/How-To-Install-CUDA-10-together-with-9-2-on-Ubuntu-18-04-with-support-for-NVIDIA-20XX-Turing-GPUs-1236/
 
+1.2 Install older cuda (e.g. 10.0)
+https://forums.developer.nvidia.com/t/older-versions-of-cuda/108163/3
+sudo apt-get install cuda-toolkit-10-0
+
+
+
 2. Install cuDNN run file and dev file by clicking on the .deb files in Downloads (tensorflow2.2 is compatible with cuDNN7, not cuDNN8)
 
 2. Install CMake using
