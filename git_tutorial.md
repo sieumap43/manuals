@@ -118,5 +118,11 @@ function lazygit() {
     git push
 }
 
+# change git default editor to nano
+git config --global core.editor "nano"
+
+# working with merge message in vim
+# https://stackoverflow.com/a/19085954
+
 VSCode
 Ctrl + Shift + T to open Git terminal (windows)
