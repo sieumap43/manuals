@@ -124,5 +124,9 @@ git config --global core.editor "nano"
 # working with merge message in vim
 # https://stackoverflow.com/a/19085954
 
+# stop git from always asking for password
+git config --global credential.helper store
+
+
 VSCode
 Ctrl + Shift + T to open Git terminal (windows)
