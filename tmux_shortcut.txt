@@ -5,3 +5,14 @@ Ctrl + B + O                Switch panes
 
 Ctrl + B + D		    Detach
 tmux a -t0		    Attach session 0
+
+
+# seamless mouse scrolling
+# https://superuser.com/a/510310
+# ~/.tmux.conf
+# set-option -g mouse on
+# tmux source-file /absolute/path/to/your/.tmux.conf
+
+# check current session
+tmux display-message -p '#S'
+

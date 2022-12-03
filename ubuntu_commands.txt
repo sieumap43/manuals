@@ -5,3 +5,9 @@ pkill -f my_pattern
 # set write permission to user
 # https://askubuntu.com/a/809562
 setfacl -R -m u:username:rwx myfolder
+
+# get storage left in current directory
+df -Ph . | tail -1 | awk '{print $4}'
+
+# get storage 
+du -sh -- *
