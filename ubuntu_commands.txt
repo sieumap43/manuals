@@ -14,6 +14,10 @@ kill -9 $(lsof -t -i:8080)
 # https://askubuntu.com/a/809562
 setfacl -R -m u:username:rwx myfolder
 
+# set (recursively) read, write, execute permission to user antrieu
+sudo chown antrieu: folder/
+sudo chmod -R u+rwx folder/
+
 # get storage left in current directory
 df -Ph . | tail -1 | awk '{print $4}'
 
