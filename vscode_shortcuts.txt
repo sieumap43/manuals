@@ -13,7 +13,7 @@ Ctrl + ]            Unindent a line
 Shift + K           Cut one line
 Shift + Delete      Also cut one line
 
-
+Ctrl + K + Ctrl + , Hide arbitrary code section
 
 Alt + $number		Open tab $number
 Ctrl + Tab          Go to previous tab(s) in history
