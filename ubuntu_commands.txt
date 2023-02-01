@@ -8,6 +8,14 @@ kill -9 pid
 # kill process on port 8080
 kill -9 $(lsof -t -i:8080)
 
+# list drives
+# https://unix.stackexchange.com/a/18927
+fdisk -l
+or
+lsblk
+
+# mount drive (e.g. /dev/sdb1 --> /scratch/fs3)
+sudo mount /dev/sdb1 /scratch/fs3
 
 
 # set write permission to user
