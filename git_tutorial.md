@@ -60,6 +60,7 @@ git branch -d some-branch # delete some-branch\
 git checkout some-branch # switch to some-branch
 git checkout -b some-branch # create some-branch
 git branch -m <old> <new> # rename branch
+git push origin :old-name new-name # propagate local rename to remote repo
 
 # Commit
 git add . # save all changes\
