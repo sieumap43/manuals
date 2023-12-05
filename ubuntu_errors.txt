@@ -1,0 +1,6 @@
+sudo: unable to open /workdrive: Read-only file system 
+1. run "lsblk -f" to check which sda is workdrive (for example sda5)
+2. run "sudo ntfsfix /dev/sda5"
+https://askubuntu.com/a/1410269
+
+
